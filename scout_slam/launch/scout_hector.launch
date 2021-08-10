@@ -1,0 +1,6 @@
+<launch>
+
+  <include file="$(find  scout_slam)/launch/hector.launch"/>
+  <node pkg="rviz" type="rviz" name="rviz" args="-d $(find  scout_description)/rviz/mapping.rviz"/>
+
+</launch>

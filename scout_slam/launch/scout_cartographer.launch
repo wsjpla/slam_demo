@@ -1,0 +1,14 @@
+<launch>
+ 
+  <node name="cartographer_node" pkg="cartographer_ros"  
+        type="cartographer_node" args="  
+            -configuration_directory $(find scout_slam)/launch
+            -configuration_basename scout_demo.lua"  
+        output="screen">  
+    <remap from="scan" to="scan" />  
+  </node>  
+ 
+  <!-- <node name="rviz" pkg="rviz" type="rviz" required="true"  
+        args="-d $(find scout_slam)/launch/demo_2d.rviz" />   -->
+        
+</launch>
