@@ -1,0 +1,27 @@
+scout_mini:
+
+  # Publish all joint states -----------------------------------
+  joint_state_controller:
+    type: joint_state_controller/JointStateController
+    publish_rate: 30 
+
+  #Position  Controllers ---------------------------------------
+  front_right_wheel_controller:
+    type: position_controllers/JointPositionController 
+    joint: front_right_wheel
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+
+  front_left_wheel_controller:
+    type: position_controllers/JointPositionController 
+    joint: front_left_wheel
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+
+  rear_left_wheel_controller:
+    type: position_controllers/JointPositionController 
+    joint: rear_left_wheel
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+
+  rear_right_wheel_controller:
+    type: position_controllers/JointPositionController 
+    joint: rear_right_wheel
+    pid: {p: 100.0, i: 0.01, d: 10.0}
