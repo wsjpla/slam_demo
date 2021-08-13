@@ -7,7 +7,7 @@
   <arg name="debug" default="false"/>
   <arg name="model" default="$(find scout_description)/urdf/scout_mini_with_laser.urdf"/>
 
-  <env name="GAZEBO_MODEL_PATH" value="$(find course_agv_gazebo)/models"/>
+  <env name="GAZEBO_MODEL_PATH" value="$(find scout_description)/models"/>
   <include file="$(find gazebo_ros)/launch/empty_world.launch">
     <arg name="world_name" value="$(find scout_description)/worlds/course_agv.world"/>
     <arg name="debug" value="$(arg debug)" />
